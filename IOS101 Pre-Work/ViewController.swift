@@ -8,11 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
     }
 
 
@@ -26,8 +26,13 @@ class ViewController: UIViewController {
             return UIColor(red: red, green: green, blue: blue, alpha: 0.5)
         }
         
-        let randomColor = changeColor()
+        var randomColor = changeColor()
         view.backgroundColor = randomColor
+        randomColor = changeColor()
+        
+        sender.backgroundColor = randomColor
+        sender.alpha = CGFloat.random(in: 0...1)
+        
     }
 }
 
